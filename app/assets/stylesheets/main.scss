@@ -1,0 +1,16 @@
+$first-color: green;
+$second-color: blue;
+$third-color: yellow;
+
+h1 {
+  
+color: $first-color;
+background-color: $third-color;
+}
+
+h2 {
+
+color: $second-color;
+background-color: $third-color;
+
+}
