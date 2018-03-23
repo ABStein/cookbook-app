@@ -1,4 +1,8 @@
 class Recipe < ApplicationRecord
+  belongs_to :user
+  has_many :category_recipes
+  has_many :categories, through: :category_recipes
+
   def ingredients_list
     ingredients.split(", ")
   end
@@ -21,5 +25,10 @@ class Recipe < ApplicationRecord
     result_time += "#{minutes} #{'Minute'.pluralize(minutes)}" if minutes > 0
 
     result_time
+  end
+
+  def chef 
+    user.name
+    
   end
 end
